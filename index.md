@@ -42,10 +42,13 @@ const nums = [true,true, false]
 const reverse= x => !x 
 
 // Javascript
-nums.map( reverse ) // -> [false, false, true]
-nums.filter( reverse ) // -> [false]
+
+nums.map(reverse) // -> [false, false, true]
+nums.filter(reverse) // -> [false]
+
 
 // Ramda
+
 map(reverse, nums) // -> [false, false, true]
 filter(reverse, nums) // -> [false]
 ```
