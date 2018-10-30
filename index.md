@@ -8,9 +8,9 @@ Javascript (ES16) sekä ...
 ### Ramda
 
 Artikkelissa käytetään kirjastoa Ramda. Ramda kertoo tärkeimpien ominaisuuksiensa olevan:
-Puhtaat funktiot (Pure functions)
-Kaikki funktiot curriattu (curry)
-Funktioiden parametrit on järjestetty siten, että data tulee aina viimeisenä
+- Puhtaat funktiot (Pure functions)
+- Kaikki funktiot curriattu (curry)
+- Funktioiden parametrit on järjestetty siten, että data tulee aina viimeisenä
 
 Tämän artikkelin tavoitteena on auttaa ymmärtämään miksi edelle esitetyt ominaisuudet ovat hyödyllisiä. 
 
@@ -23,7 +23,7 @@ const sum = (x, y) => x + y
 
 ### Puhtaat Funktiot
 
-Ovat funktioita, jotka eivät aiheuta minkäänlaisia sivuvaikutuksia oman kontekstinsa ulkopuolelle. Puhtaat funktiot ottavat vain inputin ja palauttavat outputin.
+Ovat funktioita, jotka eivät aiheuta minkäänlaisia sivuvaikutuksia oman kontekstinsa ulkopuolelle. Puhtailla funktioilla on vain **input** ja **output**.
 
 puhdas
 ```
