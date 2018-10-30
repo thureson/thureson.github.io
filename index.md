@@ -16,8 +16,12 @@ Tämän artikkelin tavoitteena on auttaa ymmärtämään miksi edelle esitetyt o
 
 ### Funktiot
 
-Esim 
+Esim.
 ```
+function sum (x, y) {
+  return x + y
+}
+
 const sum = (x, y) => x + y
 ```
 
@@ -39,7 +43,7 @@ Puhtaat funktiot varmistavat ettei muuttujia voi muokata. Aina kun halutaan eril
 ### Javascriptin valmis funktionaalinen tuki
 ```
 const nums = [true,true, false]
-const reverse= x => !x 
+const reverse = x => !x 
 ```
 Javascript
 ```
