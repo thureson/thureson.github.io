@@ -7,10 +7,10 @@ Javascript (ES16) sekä ...
 
 ### Ramda
 
-Artikkelissa käytetään kirjastoa Ramda. Ramda kertoo tärkeimpien ominaisuuksiensa olevan:
-- Puhtaat funktiot (Pure functions)
-- Kaikki funktiot curriattu (curry)
-- Funktioiden parametrit on järjestetty siten, että data tulee aina viimeisenä
+Artikkelissa käytetään kirjastoa [**Ramda**](https://ramdajs.com/). Ramda kertoo tärkeimpien ominaisuuksiensa olevan:
+- Puhtaat funktiot (**Pure functions**)
+- Kaikki funktiot curriattu (**Curry**)
+- Funktioiden parametrit on järjestetty siten, että data tulee aina viimeisenä (**Data last**)
 
 Tämän artikkelin tavoitteena on auttaa ymmärtämään miksi edelle esitetyt ominaisuudet ovat hyödyllisiä. 
 
@@ -61,6 +61,15 @@ filter(reverse, nums) // -> [false]
 ### Kompositiot
 
 Funktioita voi yhdistää.
+
+```
+import { compose } from 'ramda'
+
+const alter = (array) => compose(
+  map(),
+  filter()
+)
+```
 
 ### Curry
 
