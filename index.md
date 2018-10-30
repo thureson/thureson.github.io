@@ -1,4 +1,3 @@
-## Funktionaalinen ohjelmointi ja javascript (ramda) osa 1
 
 Tämä artikkeli on osa sarjaa, jossa tutustutaan funktionaaliseen ohjelmointiin javascriptillä. 
 
