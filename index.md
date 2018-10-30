@@ -1,37 +1,73 @@
-## Welcome to GitHub Pages
+## Funktionaalinen ohjelmointi ja javascript (ramda) osa 1
 
-You can use the [editor on GitHub](https://github.com/thureson/thureson.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Tämä artikkeli on osa sarjaa, jossa tutustutaan funktionaaliseen ohjelmointiin javascriptillä. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Ramda
 
-### Markdown
+Artikkelissa käytetään kirjastoa Ramda. Ramda kertoo tärkeimpien ominaisuuksiensa olevan:
+Puhtaat funktiot (Pure functions)
+Kaikki funktiot curriattu (curry)
+Funktioiden parametrit on järjestetty siten, että data tulee aina viimeisenä
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Tämän artikkelin tavoitteena on auttaa ymmärtämään miksi edelle esitetyt ominaisuudet ovat hyödyllisiä. 
 
-```markdown
-Syntax highlighted code block
+### Funktiot
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Esim 
+```
+const sum = (x, y) => x + y
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Puhtaat Funktiot
 
-### Jekyll Themes
+Ovat funktioita, jotka eivät aiheuta minkäänlaisia sivuvaikutuksia oman kontekstinsa ulkopuolelle. Puhtaat funktiot ottavat vain inputin ja palauttavat outputin.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/thureson/thureson.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+puhdas
+```
+const sum = (x, y) => x + y
+```
+epäpuhdas
+```
+let count = 0
+const add1 = () => count++
+```
+Puhtaat funktiot varmistavat ettei muuttujia voi muokata. Aina kun halutaan erilainen muuttuja alkuperäisestä, syötetään se funktioon ja funktio palauttaa uuden muuttujan.
 
-### Support or Contact
+### Javascriptin valmis funktionaalinen tuki
+```
+const nums = [true,true, false]
+const reverse= x => !x 
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+nums.map( reverse ) // -> [false, false, true]
+nums.filter( reverse ) // -> [false]
+
+// Ramdassa taas:
+map(reverse, nums) // -> [false, false, true]
+filter(reverse, nums) // -> [false]
+```
+### Kompositiot
+
+Funktioita voi yhdistää.
+
+### Curry
+
+Funktiot voivat palauttaa funktioita.
+
+### Argumenttien järjestys
+
+Kuten todettiin, yksi Ramdan keskeisiä suunnitteluperiaatteita on “data viimeisenä”.
+ 
+
+
+
+
+## OSA 2
+### Pointfree
+
+Data viimeisenä, Curry
+
+### Lenses
+
+
+## OSA 3
+### Kategoriateoria
