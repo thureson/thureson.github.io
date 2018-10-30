@@ -40,14 +40,16 @@ Puhtaat funktiot varmistavat ettei muuttujia voi muokata. Aina kun halutaan eril
 ```
 const nums = [true,true, false]
 const reverse= x => !x 
-
-// Javascript
-
+```
+Javascript
+```
 nums.map(reverse) // -> [false, false, true]
 nums.filter(reverse) // -> [false]
+```
 
-
-// Ramda
+Ramda
+```
+import { map, filter } from 'ramda'
 
 map(reverse, nums) // -> [false, false, true]
 filter(reverse, nums) // -> [false]
