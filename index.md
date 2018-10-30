@@ -1,6 +1,10 @@
 
 Tämä artikkeli on osa sarjaa, jossa tutustutaan funktionaaliseen ohjelmointiin javascriptillä. 
 
+### Esitiedot
+
+Javascript (ES16) sekä ...
+
 ### Ramda
 
 Artikkelissa käytetään kirjastoa Ramda. Ramda kertoo tärkeimpien ominaisuuksiensa olevan:
