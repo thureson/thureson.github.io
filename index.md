@@ -5,6 +5,12 @@ Tämä artikkeli on osa sarjaa, jossa tutustutaan funktionaaliseen ohjelmointiin
 
 Javascript (ES16) sekä ...
 
+### Setup
+
+```
+yarn add ramda
+```
+
 ### Ramda
 
 Artikkelissa käytetään kirjastoa [**Ramda**](https://ramdajs.com/). Ramda kertoo tärkeimpien ominaisuuksiensa olevan:
