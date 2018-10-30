@@ -10,6 +10,10 @@ Javascript (ES16) sekä ...
 ```
 yarn add ramda
 ```
+or
+```
+npm install ramda
+```
 
 ### Ramda
 
