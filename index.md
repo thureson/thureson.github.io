@@ -35,38 +35,50 @@ function sum (x, y) {
 const sum = (x, y) => x + y
 ```
 
+### Termeistä
+
+Tässä määritellään muutama artikkelissa käytetty termi. 
+
+#### Konteksti
+
+Konteksti on javascriptissä tärkeä käsite. 
+```
+this
+```
+
 ### Puhtaat Funktiot
 
 Ovat funktioita, jotka eivät aiheuta minkäänlaisia sivuvaikutuksia oman kontekstinsa ulkopuolelle. Puhtailla funktioilla on vain **input** ja **output**.
 
 puhdas
 ```
-const sum = (x, y) => x + y
+const square = x => x * x
 ```
 epäpuhdas
 ```
 let count = 0
 const add1 = () => count++
 ```
-Puhtaat funktiot varmistavat ettei muuttujia voi muokata. Aina kun halutaan erilainen muuttuja alkuperäisestä, syötetään se funktioon ja funktio palauttaa uuden muuttujan.
+Puhtaat funktiot varmistavat ettei muuttujia voi muokata niiden kontekstin ulkopuolella. Aina kun halutaan erilainen muuttuja alkuperäisestä, syötetään se funktioon ja funktio palauttaa uuden muuttujan.
 
 ### Javascriptin valmis funktionaalinen tuki
 ```
-const nums = [true,true, false]
-const reverse = x => !x 
+const nums = [1, 2, 3]
+const square = x => x * x
+const isEven = x => x % 2 === 0
 ```
 Javascript
 ```
-nums.map(reverse) // -> [false, false, true]
-nums.filter(reverse) // -> [false]
+nums.map(square) // -> [1, 4, 9]
+nums.filter(isEven) // -> [2]
 ```
 
 Ramda
 ```
 import { map, filter } from 'ramda'
 
-map(reverse, nums) // -> [false, false, true]
-filter(reverse, nums) // -> [false]
+map(square, nums) // -> [1, 4, 9]
+filter(isEven, nums) // -> [2]
 ```
 ### Kompositiot
 
@@ -76,9 +88,12 @@ Funktioita voi yhdistää.
 import { compose } from 'ramda'
 
 const alter = (array) => compose(
-  map(),
-  filter()
-)
+  filter(isEven, array),
+  map(square, array)
+) 
+
+alter(nums)
+// -> [4]
 ```
 
 ### Curry
