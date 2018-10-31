@@ -5,6 +5,14 @@ Tämä artikkeli on osa sarjaa, jossa tutustutaan funktionaaliseen ohjelmointiin
 
 Javascript (ES16) sekä ...
 
+### Javascript
+
+Javascript on ohjelmointikieli.
+
+### Funktionaalinen ohjelmointi
+
+Funktionaalinen ohjelmointi on ohjelmointiparadigma, jossa ... 
+
 ### Setup
 
 ```
