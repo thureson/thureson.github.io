@@ -100,13 +100,24 @@ const alter = (array) => compose(
   map(square, array)
 ) 
 
-alter(nums)
-// -> [4]
+alter(nums) // -> [4]
 ```
 
 ### Curry
 
 Funktiot voivat palauttaa funktioita.
+Javascriptissä tämä voidaan toteuttaa esim. 
+```
+const multiply = x = y => x * y
+
+const multiplyWith7 = multiply(7)
+
+multiplyWith7(2) // -> 14
+multiplyWith7(3) // -> 21
+```
+```
+multiply(4)(6) // -> 24
+```
 
 ### Argumenttien järjestys
 
