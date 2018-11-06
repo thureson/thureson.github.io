@@ -123,11 +123,6 @@ multiply(4)(6) // -> 24
 
 Kuten todettiin, yksi Ramdan keskeisiä suunnitteluperiaatteita on “data viimeisenä”.
  
-
-
-
-
-## OSA 2
 ### Pointfree
 
 Data viimeisenä, Curry
@@ -161,6 +156,9 @@ const alter = compose(
 
 alter(nums) // -> [4]
 ```
+
+## OSA 2
+### Funktioiden esittelyä
 
 ### Lenses
 
