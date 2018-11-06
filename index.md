@@ -132,6 +132,36 @@ Kuten todettiin, yksi Ramdan keskeisiä suunnitteluperiaatteita on “data viime
 
 Data viimeisenä, Curry
 
+```
+const nums = [1, 2, 3]
+const square = x => x * x
+const isEven = x => x % 2 === 0
+```
+
+Operaatio
+```
+import { compose } from 'ramda'
+
+const alter = (array) => compose(
+  filter(isEven, array),
+  map(square, array)
+) 
+
+alter(nums) // -> [4]
+```
+
+Voidaan kirjoittaa myös:
+```
+import { compose } from 'ramda'
+
+const alter = compose(
+  filter(isEven),
+  map(square)
+) 
+
+alter(nums) // -> [4]
+```
+
 ### Lenses
 
 
