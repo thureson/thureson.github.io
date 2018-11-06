@@ -27,7 +27,7 @@ npm install ramda
 
 Artikkelissa käytetään kirjastoa [**Ramda**](https://ramdajs.com/). Ramda kertoo tärkeimpien ominaisuuksiensa olevan:
 - Puhtaat funktiot (**Pure functions**)
-- Kaikki funktiot curriattu (**Curry**)
+- Kaikki funktiot curryattu (**Curry everything**)
 - Funktioiden parametrit on järjestetty siten, että data tulee aina viimeisenä (**Data last**)
 
 Tämän artikkelin tavoitteena on auttaa ymmärtämään miksi edelle esitetyt ominaisuudet ovat hyödyllisiä. 
@@ -114,14 +114,28 @@ const multiplyWith7 = multiply(7)
 
 multiplyWith7(2) // -> 14
 multiplyWith7(3) // -> 21
+
+multiply(4)(6) // -> 24
 ```
+
+Ramdan yksi keskeisiä suunnitteluperiaatteita on **Curry everything**
+
+Esimerkiksi Ramdan funktio **multiply**:
 ```
+import { multiply } from 'ramda'
+
+const multiplyWith7 = multiply(7)
+
+multiplyWith7(2) // -> 14
+multiplyWith7(3) // -> 21
+
+multiply(4, 6) // -> 24
 multiply(4)(6) // -> 24
 ```
 
 ### Argumenttien järjestys
 
-Kuten todettiin, yksi Ramdan keskeisiä suunnitteluperiaatteita on “data viimeisenä”.
+Kuten todettiin, yksi Ramdan keskeisiä suunnitteluperiaatteita on **Data last**.
  
 ### Pointfree
 
